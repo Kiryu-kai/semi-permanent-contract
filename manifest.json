@@ -1,0 +1,15 @@
+{
+  "short_name": "桐生会半永久的継続契約書",
+  "name": "桐生会半永久的継続契約書 桐生会",
+  "icons": [
+    {
+      "src": "favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ],
+  "start_url": "/semi-permanent-contract",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
