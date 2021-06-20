@@ -1,12 +1,75 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/normalize.css/normalize.css';
 import './common.scss';
+import styles from './ScrollLink.module.scss';
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+import { Timeline } from './components/Timeline';
+import { ContractTexts } from './components/ContractTexts';
 import reportWebVitals from './reportWebVitals';
+
+function ScrollLink() {
+  const onclick = (e: React.MouseEvent) => {
+    const {hash} = e.target as HTMLAnchorElement;
+    const target = document.querySelector(hash);
+
+    if (!target) {
+      return;
+    }
+
+    e.preventDefault();
+    window.history.pushState(null, document.title, hash);
+    window.scroll({
+      top: target.getBoundingClientRect().top + window.pageYOffset,
+      behavior: 'smooth',
+    });
+  };
+
+  useEffect(() => {
+    // TODO: CSS Modules でkeyframesを動作させる方法を調査する
+    const style = document.createElement('style');
+
+    document.head.append(style);
+    style.textContent = `
+      @keyframes scroll-move {
+        0% {
+          transform: translateY(0);
+        }
+
+        100% {
+          transform: translateY(-4px);
+        }
+      }
+
+      .${styles.a}::after {
+        animation: 1s scroll-move infinite alternate-reverse linear;
+      }
+    `;
+  });
+
+  return (
+    <p className={styles.wrap}>
+      <a href="#timeline" className={styles.a} onClick={onclick}>
+        同意書一覧
+      </a>
+    </p>
+  );
+}
 
 ReactDOM.render(
   <React.StrictMode>
-    <p>WIP</p>
+    <Header />
+    <main>
+      <ScrollLink />
+
+      <ContractTexts />
+
+      <div id="timeline">
+        <Timeline />
+      </div>
+    </main>
+    <Footer />
   </React.StrictMode>,
   document.getElementById('root')
 );

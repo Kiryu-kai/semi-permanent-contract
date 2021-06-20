@@ -1,0 +1,59 @@
+@use "../utils/mixin.scss" as *;
+
+.wrap {
+  padding: 40px 20px;
+  background: #fff;
+}
+
+.h2 {
+  margin: 0 0 20px;
+  font-size: 24px;
+  text-align: center;
+}
+
+.p {
+  margin: 0 0 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0;
+  margin: -10px 0 0 -10px;
+  list-style: none;
+
+  @include min-screen() {
+    margin: -20px 0 0 -20px;
+  }
+}
+
+.li {
+  flex-basis: 33.3333%;
+  padding: 10px 0 0 10px;
+
+  @include min-screen() {
+    flex-basis: 20%;
+    max-width: 200px;
+    padding: 20px 0 0 20px;
+  }
+}
+
+.panel {
+  display: block;
+  overflow: hidden;
+  border-radius: 6px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+}
+
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.text {
+  display: none;
+}
