@@ -53,6 +53,7 @@
     "node": "14",
     "npm": "🐉 yarnコマンドをキメてくれよな"
   },
+  "homepage": "/semi-permanent-contract/",
   "lint-staged": {
     "*.{js,ts,jsx,tsx}": [
       "npx eslint . --fix"
