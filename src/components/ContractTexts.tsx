@@ -120,7 +120,16 @@ const note = {
 };
 
 export function ContractTexts() {
-  const lang = window.navigator.language === 'ja' ? 'ja' : 'en';
+  const lang = (() => {
+    switch (window.navigator.language) {
+    case 'ja':
+    case 'ja-jp':
+      return 'ja'
+
+    default:
+      return 'en'
+    }
+  })();
 
   return (
     <>
