@@ -42,6 +42,22 @@ function ScrollLink() {
         }
       }
 
+      @keyframes blurIn {
+        0% {
+          filter: blur(50px);
+        }
+
+        100% {
+          filter: none;
+        }
+      }
+
+      @media (prefers-reduced-motion: no-preference) {
+        body::before {
+          animation: 2s blurIn linear;
+        }
+      }
+
       .${styles.a}::after {
         animation: 1s scroll-move infinite alternate-reverse linear;
       }
