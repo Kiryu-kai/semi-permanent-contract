@@ -16,9 +16,13 @@
 }
 
 .p {
-  margin: 0 0 40px;
+  margin: 0 0 4px;
   font-size: 14px;
   text-align: center;
+
+  &:nth-of-type(2) {
+    margin-bottom: 40px;
+  }
 }
 
 .ul {

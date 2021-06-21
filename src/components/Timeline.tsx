@@ -54,10 +54,14 @@ export function Timeline() {
       <h2 className={styles.h2}>#桐生会半永久的継続契約書</h2>
 
       <p className={styles.p}>
-        ※ <a href="https://twitter.com/kiryu_kai_contr">
+        <a href="https://twitter.com/kiryu_kai_contr">
           @kiryu_kai_contr
         </a>
         がいいねしたものがリストアップされます。
+      </p>
+
+      <p className={styles.p}>
+        ハッシュタグをつけてつぶやいてくださいね！
       </p>
 
       <ul className={styles.ul}>
