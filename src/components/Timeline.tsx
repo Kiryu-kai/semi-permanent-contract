@@ -35,7 +35,7 @@ export function Timeline() {
       }
 
       while(list.length < 7) {
-        list.push(<li key={Math.random()} className={styles.li}>
+        list.unshift(<li key={Math.random()} className={styles.li}>
           <span className={styles.panel}>
             <img src={responses[0].extended_entities.media[0].media_url_https} alt="" className={styles.img} />
             <span className={styles.text}>{responses[0].text}</span>
