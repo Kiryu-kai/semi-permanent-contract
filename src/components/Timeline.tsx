@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react';
 import Twitter from 'twitter';
 import styles from './Timeline.module.scss';
 
-const getData = () => fetch('https://kiryukai-semi-permanent-contract.heppokofrontend.dev/api.php?include_entities=false&a').then(r => r.text());
+const getData = () => fetch('https://kiryukai-semi-permanent-contract.heppokofrontend.dev/api.php?count=200').then(r => r.text());
 
 export function Timeline() {
   /** @see https://developer.twitter.com/en/docs/twitter-api/v1/tweets/post-and-engage/api-reference/get-favorites-list */
