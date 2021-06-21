@@ -16,6 +16,7 @@ export function Timeline() {
 
       for (const tweet of responses) {
         if (
+          !tweet.extended_entities ||
           !tweet.extended_entities.media ||
           !tweet.extended_entities.media[0]
         ) {
