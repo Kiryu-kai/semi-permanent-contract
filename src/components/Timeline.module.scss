@@ -1,8 +1,12 @@
 @use "../utils/mixin.scss" as *;
 
 .wrap {
-  padding: 40px 20px;
+  padding: 40px 20px 60px;
   background: #fff;
+
+  @include min-screen() {
+    padding-bottom: 100px;
+  }
 }
 
 .h2 {
