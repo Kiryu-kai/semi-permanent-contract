@@ -24,7 +24,7 @@ export function Timeline() {
 
         // console.log(tweet);
 
-        list.push(
+        list.unshift(
           <li key={tweet.id_str} lang={tweet.lang} className={styles.li}>
             <a href={`https://twitter.com/${tweet.user.screen_name}/status/${tweet.id_str}`} className={styles.panel}>
               <img src={media_url_https} alt={tweet.user.name} className={styles.img} width={w} height={h} />
@@ -35,7 +35,7 @@ export function Timeline() {
       }
 
       while(list.length < 7) {
-        list.unshift(<li key={Math.random()} className={styles.li}>
+        list.push(<li key={Math.random()} className={styles.li}>
           <span className={styles.panel}>
             <img src={responses[0].extended_entities.media[0].media_url_https} alt="" className={styles.img} />
             <span className={styles.text}>{responses[0].text}</span>
