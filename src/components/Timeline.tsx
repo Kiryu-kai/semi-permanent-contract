@@ -15,7 +15,12 @@ export function Timeline() {
       const list: React.ReactNode[] = [];
 
       for (const tweet of responses) {
-        if (!tweet.extended_entities.media[0]) {
+        if (
+          !tweet.extended_entities.media ||
+          !tweet.extended_entities.media[0]
+        ) {
+          console.log(tweet);
+
           continue;
         }
 
