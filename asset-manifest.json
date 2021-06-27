@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/semi-permanent-contract/static/css/main.e195dccb.chunk.css",
-    "main.js": "/semi-permanent-contract/static/js/main.505d528e.chunk.js",
-    "main.js.map": "/semi-permanent-contract/static/js/main.505d528e.chunk.js.map",
+    "main.js": "/semi-permanent-contract/static/js/main.59253546.chunk.js",
+    "main.js.map": "/semi-permanent-contract/static/js/main.59253546.chunk.js.map",
     "runtime-main.js": "/semi-permanent-contract/static/js/runtime-main.500a7a7a.js",
     "runtime-main.js.map": "/semi-permanent-contract/static/js/runtime-main.500a7a7a.js.map",
     "static/css/2.679831fc.chunk.css": "/semi-permanent-contract/static/css/2.679831fc.chunk.css",
@@ -22,6 +22,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.ddd10adf.chunk.js",
     "static/css/main.e195dccb.chunk.css",
-    "static/js/main.505d528e.chunk.js"
+    "static/js/main.59253546.chunk.js"
   ]
 }
