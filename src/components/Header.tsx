@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Header.module.scss';
 import { TextWrap } from './TextWrap';
+import logo from '../image/logo.png'
 
 export function Header() {
   return (
@@ -15,7 +16,7 @@ export function Header() {
       </div>
 
       <div className={styles.logo}>
-        <img src="./image/logo.png" alt="" className={styles.img} />
+        <img src={logo} alt="" className={styles.img} />
       </div>
     </header>
   );

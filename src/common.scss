@@ -1,3 +1,5 @@
+@use "./utils/mixin.scss" as *;
+
 *,
 *::before,
 *::after {
@@ -53,7 +55,14 @@ body {
 }
 
 a {
-  color: #e88b00;
+  color: inherit;
+
+  @include min-screen() {
+    &:hover,
+    &:focus {
+      color: #e88b00;
+    }
+  }
 }
 
 small {

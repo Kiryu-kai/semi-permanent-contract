@@ -2,12 +2,14 @@ import React, {useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import '../node_modules/normalize.css/normalize.css';
 import './common.scss';
-import styles from './ScrollLink.module.scss';
+import styles from './components/ScrollLink.module.scss';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Timeline } from './components/Timeline';
 import { ContractTexts } from './components/ContractTexts';
 import reportWebVitals from './reportWebVitals';
+import cursor from './image/cursor.png'
+import bg from './image/bg.png'
 
 function ScrollLink() {
   const onclick = (e: React.MouseEvent) => {
@@ -32,6 +34,18 @@ function ScrollLink() {
 
     document.head.append(style);
     style.textContent = `
+      body {
+        cursor: url(${cursor}), auto;
+      }
+
+      body::before {
+        background-image: url(${bg});
+      }
+
+      a {
+        cursor: url(${cursor}), pointer;
+      }
+
       @keyframes scroll-move {
         0% {
           transform: translateY(0);

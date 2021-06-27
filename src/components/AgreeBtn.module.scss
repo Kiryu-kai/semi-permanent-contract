@@ -1,3 +1,5 @@
+@use "../utils/mixin.scss" as *;
+
 .wrap {
   margin: 80px 0 60px;
   text-align: center;
@@ -13,4 +15,14 @@
   text-decoration: none;
   background: #f57b00;
   border-radius: 6px;
+
+  @include min-screen() {
+    transition: .2s opacity ease-out;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      opacity: .8;
+    }
+  }
 }

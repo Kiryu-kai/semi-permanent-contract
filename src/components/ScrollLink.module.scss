@@ -1,3 +1,5 @@
+@use "../utils/mixin.scss" as *;
+
 .wrap {
   margin: 0 0 40px;
   text-align: center;
@@ -29,5 +31,19 @@
     border: solid transparent;
     border-width: 8px 7px 0;
     border-top-color: #333;
+  }
+
+  @include min-screen() {
+    transition: .2s background-color ease-out;
+
+    &:hover,
+    &:focus {
+      color: #fff;
+      background: #333;
+
+      &::after {
+        border-top-color: #fff;
+      }
+    }
   }
 }
